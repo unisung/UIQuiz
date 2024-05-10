@@ -1,0 +1,34 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<style>
+#hiddenDiv{width: 100px; height: 100px; visibility: hidden;}
+div{background-color: red;}
+</style>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	  $("#on_layer").click(function(){
+	    showHide();
+	  });
+	});
+
+function showHide(){
+	var div = document.getElementById('hiddenDiv');
+	if (div.style.visibility=='hidden'){
+		div.style.visibility='visible';
+	}else if(div.style.visibility=='visible'){
+		div.style.visibility='hidden';
+	}else{
+		div.style.visibility='visible';
+	}
+}
+</script>
+</head>
+<body>
+<div id="hiddenDiv">
+	<div>
+	</div>
+</div>
+<a href="#" id="on_layer">토글</a>
+</body>
+</html>

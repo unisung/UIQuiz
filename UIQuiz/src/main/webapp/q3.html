@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Example</title>
+</head>
+<body>
+  <ul id="myList">
+    <li>Apple</li>
+    <li>Orange</li>
+    <li>Banana</li>
+  </ul>
+  <button onclick="addElement()">Add Element</button>
+  <button onclick="deleteElement()">Delete Element</button>
+  <script>
+    // 요소 추가 함수
+    function addElement() {
+      // 새로운 <li> 요소 생성
+      var newItem = document.createElement("li");//<li></li>
+      // 새로운 요소에 텍스트 추가 Grapes
+      newItem.textContent = "Grapes"; //<li>Grapes</li>
+      // <ul> 요소에 새로운 요소 추가
+      let myList = document.getElementById('myList'); // <ul></ul>
+      myList.appendChild(newItem); //<ul><li>Grapes</li></ul>
+    }
+
+    // 요소 삭제 함수
+    function deleteElement() {
+      // <li> 요소 선택
+      let getChild = document.getElementById('myList'); 
+	  // 선택한 요소의 부모 요소에서 삭제
+	   getChild.removeChild(getChild.lastElementChild);
+    }
+  </script>
+</body>
+</html>
